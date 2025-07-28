@@ -17,28 +17,23 @@ test = {
           ...   def __init__(self):
           ...         return
           >>> print(A.x, B.x, C.x)
-          10c721bc82fdd7c9ec09ace56a4babb2
-          # locked
+          0 0 0
           >>> B.x = 2
           >>> print(A.x, B.x, C.x)
-          ddd4223b9fcb9aacc0698921d5b93822
-          # locked
+          0 2 0
           >>> A.x += 1
           >>> print(A.x, B.x, C.x)
-          ace02b4030564dff850161ec584a2b14
-          # locked
+          1 2 1
           >>> obj = C()
           >>> obj.y = 1
           >>> C.y == obj.y
-          a559f517e8f86de30b928d7e29ec2331
-          # locked
+          False
           >>> A.y = obj.y
           >>> print(A.y, B.y, C.y, obj.y)
-          cd186634874ca6ee490ac84564df8a7f
-          # locked
+          1 1 1 1
           """,
           'hidden': False,
-          'locked': True,
+          'locked': False,
           'multiline': False
         }
       ],
